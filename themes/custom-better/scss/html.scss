@@ -1,0 +1,10 @@
+@import "_common.scss";
+
+// exported html does not use custom class!
+// .custom {
+    
+body {
+    background: $grayWhite;
+    max-width: 900px;
+    margin: 1rem auto;
+}

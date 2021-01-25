@@ -1,0 +1,211 @@
+$grayWhite: #f5f4f5; // almost white
+$graySidebar: #eaeaeb; // sidebar background
+$grayBorder: #d0d0d0; // window borders
+$graySelected: #ababab; // sidebar selected row
+$graySegment: #6c6c6c; // segmented control, format bar controls
+$grayText: #232323; // sidebar dark text, sidebar control
+$blue1: #2d5ba0;
+$blue2: #0a213b;
+$yellow: #FCBA02;
+
+// $sans: "Avenir Next", sans-serif;
+$sans: "IBM Plex Sans", sans-serif;
+$mono: "IBM Plex Mono", monospace;
+
+html, body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body, #contentarea {
+    font-family: $sans;
+    line-height: 1.6rem;
+}
+
+code {
+    font-family: $mono;
+}
+
+.ace_static_highlight, 
+.ace_editor, 
+.editor.ace_editor {  
+    font-family: $mono;
+    line-height: 1.4rem;
+}
+
+.diagram-cell svg text {
+    font-family: $sans !important;
+}
+
+// .custom {
+
+#titlearea {
+    font-weight: bold;
+    padding: 1rem;
+    margin: 0;
+    .title {
+        margin: 0;
+        padding: 0;
+    }
+    #tag-field {
+        display: none;
+    }
+}
+
+#contentarea {
+    color: $grayText;
+    padding: 0;
+    margin: 2rem;
+    font-size: 15px;
+    overflow-x: visible;
+}
+
+.diagram-cell svg text {
+    font-size: 15px !important;
+}
+
+ol, ul { 
+    margin: 0;
+    padding: 0 0 0 2.4rem;
+    // list-style: none; /* Remove default bullets */
+}
+
+h1, h2, h3 {
+    color: $blue2;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 1.4rem;
+
+    // &:before {
+    //     content: '# ';
+    //     color: $graySegment;
+    // }
+}
+
+h2 {
+    font-size: 1.2rem;
+
+    // &:before {
+    //     content: '## ';
+    //     color: $graySegment;
+    // }
+}
+
+h3 {
+    font-size: 1rem;
+
+    // &:before {
+    //     content: '### ';
+    //     color: $graySegment;
+    // }
+}
+
+h1, h2, h3 {
+    margin: 1.4rem 0;
+}
+
+table {
+    margin: 0;
+    padding: 0;
+
+    border-color: $grayBorder;
+
+    th {
+        background: $grayWhite;
+        border-color: $grayBorder;
+    }
+
+    td {
+        background: white;
+        border-color: $grayBorder;
+    }
+}
+
+.cell {
+    h2:nth-child(1),
+    h3:nth-child(1),
+    h1:nth-child(1) {
+        margin-top: 0;
+    }
+}
+
+a {
+    color: $blue1;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+
+input[type=checkbox] {
+    cursor: pointer;
+    // Use this for sysem font.
+    // vertical-align: text-bottom;
+
+    // Use this for Avenir Next
+    vertical-align: -3px;
+
+    -webkit-appearance: none;
+    width: 1rem;
+    height: 1rem;
+    padding: 0;
+    margin: 0 0 0 0;
+    border-radius: 50%;
+    display: inline-block;
+    background: $grayWhite;
+    border: 1px solid $graySelected;
+
+    &::after {
+        color: transparent;
+        position: absolute;
+        display: inline-block;
+        line-height: 10px;
+        font-size: 10px;
+        padding: 2px 0 0 2px;
+        font-weight: 900;
+        content: "✓";
+    }
+    
+    &:checked {
+        background-color: $yellow;
+        border: 1px solid $yellow;
+    }
+    
+    &:checked::after {
+        color: white;
+    }
+}
+
+// div > input[type=checkbox] {
+//     margin: 0 0 0 0.8em;
+// }
+
+.cell, .cell.inEditMode {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+}
+
+.ace_static_highlight {
+    border: 1px solid $graySidebar;
+    background: white;
+    padding: 12px;
+    font-size: 12px;
+}
+
+.ace_heading {
+    color: $grayText !important;
+    font-weight: bold;
+}
+
+img {
+    // border: 1px solid $grayBorder;
+    display: block;
+    // box-shadow: 0px 0px 8px $graySegment;
+}

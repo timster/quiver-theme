@@ -1,0 +1,33 @@
+@import "_common.scss";
+
+// .custom {
+
+.ace_editor, 
+.editor.ace_editor {  
+    font-size: 12px;
+}
+
+.cell, .cell.inEditMode {
+    border: 1px solid transparent;
+}
+
+.diagram-cell, .diagram-cell.inEditMode,
+.latex-cell, .latex-cell.inEditMode,
+.markdown-cell, .markdown-cell.inEditMode,
+.code-cell, .code-cell.inEditMode {
+    border: 1px solid $grayBorder;
+    background: white;
+    padding: 12px 8px;
+}
+
+.text-cell {
+    // padding: 10px;
+    // margin: -10px -10px 0 -10px;
+}
+
+.text-cell.inEditMode {
+    // padding: 10px;
+    // margin: -10px -10px 0 -10px;
+    border: 1px solid $grayBorder;
+}
+
